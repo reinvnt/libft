@@ -6,7 +6,7 @@
 /*   By: pbie <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 17:01:11 by pbie              #+#    #+#             */
-/*   Updated: 2019/10/30 21:42:49 by rventer          ###   ########.fr       */
+/*   Updated: 2019/10/30 21:56:49 by rventer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 char		*ft_strcpy(char *dst, const char *src)
 {
-	size_t	i
+	size_t	i;
 
-	i = 0
+	i = 0;
 	while (src[i] != '\0')
 	{
-		dst[i] = src[i]
-		i++
-		dst[i] = '\0'
+		dst[i] = src[i];
+		i++;
+		dst[i] = '\0';
 	}
-	return (dst)
+	return (dst);
 }
