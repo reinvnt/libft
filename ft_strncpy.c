@@ -1,21 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rventer <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/03 19:23:22 by rventer           #+#    #+#             */
-/*   Updated: 2019/06/03 19:23:29 by rventer          ###   ########.fr       */
+/*   Created: 2019/05/28 19:14:08 by rventer           #+#    #+#             */
+/*   Updated: 2019/05/28 19:14:10 by rventer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int     ft_isdigit(int c)
+char    *ft_strncpy(char *dst, cont char *src, size_t n)
 {
-    if (c >= '0' && c <= '9')
-        return (1);
-    else
-        return (0);
+    size_t i;
+
+    i = 0;
+    while (src[i] && i < n)
+    {
+        dst[i] = src[i];
+        i++;
+    }
+    while (i < n)
+    {
+        dst[i] = '\0';
+        i++;
+    }
+    return (dst);
 }

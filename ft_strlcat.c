@@ -1,21 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rventer <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/03 19:23:22 by rventer           #+#    #+#             */
-/*   Updated: 2019/06/03 19:23:29 by rventer          ###   ########.fr       */
+/*   Created: 2019/05/28 19:15:26 by rventer           #+#    #+#             */
+/*   Updated: 2019/05/28 19:15:29 by rventer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int     ft_isdigit(int c)
+size_t  ft_strlcat(char *dst, const char *src, size_t size)
 {
-    if (c >= '0' && c <= '9')
-        return (1);
-    else
-        return (0);
+    size_t j;
+    size_t k;
+
+    j = 0;
+    k = 0;
+    while (dst[j] && j < size)
+        j++;
+    while ((src[k]) && ((j + k + 1) < size))
+    {
+        dst[j + k] = src[k];
+        k++;
+    }
+    if (j != size)
+        dst[j + k] = '\0';
+    return (j + ft_strlen(src));
 }

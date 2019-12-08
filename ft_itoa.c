@@ -1,21 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rventer <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/03 19:23:22 by rventer           #+#    #+#             */
-/*   Updated: 2019/06/03 19:23:29 by rventer          ###   ########.fr       */
+/*   Created: 2019/05/28 19:56:31 by rventer           #+#    #+#             */
+/*   Updated: 2019/06/21 16:03:40 by rventer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int     ft_isdigit(int c)
+char	*ft_itoa(int n)
 {
-    if (c >= '0' && c <= '9')
-        return (1);
-    else
-        return (0);
+	char *str;
+
+	if (!(str = (char *)malloc(sizeof(char) * 2)))
+		return (NULL);
+	if (n == -2147483648)
+		return (ft_strcpy(str, "-2147483648"));
+	if (n < 0)
+	{
+		str[0] = '-';
+		str[1] = '\0';
+		str = ft_strjoin(str, ft_itoa(-n));
+	}
+	else if (n >= 10)
+		str = ft_strjoin(ft_itoa(n / 10), ft_itoa(n % 10));
+	else if (n < 10 && n >= 0)
+	{
+		str[0] = n + '\0';
+		str[1] = '\0';
+	}
+	return (str);
 }

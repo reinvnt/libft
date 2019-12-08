@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rventer <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/26 15:37:55 by pbie              #+#    #+#             */
-/*   Updated: 2019/10/30 22:18:49 by rventer          ###   ########.fr       */
+/*   Created: 2019/05/27 13:13:47 by rventer           #+#    #+#             */
+/*   Updated: 2019/05/28 19:24:48 by rventer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_isprint(int c)
+int		ft_isprint(int c)
 {
 	if (c >= ' ' && c <= '~')
 		return (1);

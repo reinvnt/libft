@@ -5,23 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rventer <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/23 17:01:11 by pbie              #+#    #+#             */
-/*   Updated: 2019/10/30 21:58:19 by rventer          ###   ########.fr       */
+/*   Created: 2019/05/26 21:40:42 by rventer           #+#    #+#             */
+/*   Updated: 2019/07/23 13:59:12 by rventer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strcpy(char *dst, const char *src)
+char	*ft_strcpy(char *dst, const char *src)
 {
-	size_t	i;
+	size_t i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (src[i])
 	{
 		dst[i] = src[i];
 		i++;
-		dst[i] = '\0';
 	}
+//	dst[i] = '\0';
 	return (dst);
 }
+	

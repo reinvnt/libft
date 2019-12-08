@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rventer <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/23 16:56:53 by pbie              #+#    #+#             */
-/*   Updated: 2019/10/30 21:54:35 by rventer          ###   ########.fr       */
+/*   Created: 2019/05/26 20:50:47 by rventer           #+#    #+#             */
+/*   Updated: 2019/05/26 21:13:46 by rventer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_putstr(char const *s)
+void	ft_putstr(char const *s)
 {
 	size_t	i;
 

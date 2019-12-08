@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rventer <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/23 16:53:45 by pbie              #+#    #+#             */
-/*   Updated: 2019/10/30 21:47:09 by rventer          ###   ########.fr       */
+/*   Created: 2019/05/24 21:16:44 by rventer           #+#    #+#             */
+/*   Updated: 2019/08/11 21:06:50 by rventer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_putchar(char c)
+void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
